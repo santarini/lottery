@@ -4,10 +4,7 @@ def Lottery():
     startNumber = input("\nPick 5 numbers from 1 to 69:\n")
     numberArray = [int(i) for i in startNumber.split()]
     numberArray.sort()
-    duplicateTest = len(numberArray) != len(set(numberArray))
-
-
-    if (duplicateTest == True):
+    if ((len(numberArray) != len(set(numberArray))) == True):
         print("\nYou entered a duplicate")
         print(numberArray)
         Lottery()
@@ -32,9 +29,10 @@ def Lottery():
 
 def Draw():
     WhiteBalls = random.sample(range(1,70), 5)
-    PowerBall = random.sample(range(1,27), 1)
+    #PowerBall = random.sample(range(1,27), 1)
     WhiteBalls.sort()
     print(WhiteBalls)
-    print(PowerBall)
+    #print(PowerBall)
+
 
 Lottery()
