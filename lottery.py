@@ -1,6 +1,7 @@
 import random
 
 def Lottery():
+    n = 1
     startNumber = input("\nPick 5 numbers from 1 to 69:\n")
     numberArray = [int(i) for i in startNumber.split()]
     numberArray.sort()
@@ -26,17 +27,21 @@ def Lottery():
         Lottery()
     else:
         print(numberArray)
-    CheckMatch(numberArray)
+    Draw(n, numberArray)
 
-def Draw():
+def Draw(n, numberArray):
     WhiteBalls = random.sample(range(1,70), 5)
     #PowerBall = random.sample(range(1,27), 1)
     WhiteBalls.sort()
     print(WhiteBalls)
     #print(PowerBall)
+    CheckMatch(n, numberArray, WhiteBalls)
 
-def CheckMatch(numberArray):
-    if (numberArray == [1, 2, 3, 4, 5]):
+def CheckMatch(n, numberArray, WhiteBalls):
+    if (numberArray == WhiteBalls):
         print("You won!")
-
-Lottery()
+        print("After " + str(n) + " tries")
+    else:
+        print("You lost " + str(n) + " times")
+        n +1
+        Draw(n, numberArray)
