@@ -1,4 +1,7 @@
 import random
+import sys
+
+sys.setrecursionlimit(2000)
 
 def Lottery():
     n = 1
@@ -29,6 +32,8 @@ def Lottery():
         print(numberArray)
     Draw(n, numberArray)
 
+
+
 def Draw(n, numberArray):
     WhiteBalls = random.sample(range(1,70), 5)
     #PowerBall = random.sample(range(1,27), 1)
@@ -37,11 +42,15 @@ def Draw(n, numberArray):
     #print(PowerBall)
     CheckMatch(n, numberArray, WhiteBalls)
 
+
+
 def CheckMatch(n, numberArray, WhiteBalls):
     if (numberArray == WhiteBalls):
         print("You won!")
         print("After " + str(n) + " tries")
     else:
         print("You lost " + str(n) + " times")
-        n +1
+        n += 1
         Draw(n, numberArray)
+        
+Lottery()
