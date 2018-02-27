@@ -26,6 +26,7 @@ def Lottery():
         Lottery()
     else:
         print(numberArray)
+    CheckMatch(numberArray)
 
 def Draw():
     WhiteBalls = random.sample(range(1,70), 5)
@@ -34,5 +35,8 @@ def Draw():
     print(WhiteBalls)
     #print(PowerBall)
 
+def CheckMatch(numberArray):
+    if (numberArray == [1, 2, 3, 4, 5]):
+        print("You won!")
 
 Lottery()
