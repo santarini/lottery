@@ -4,9 +4,9 @@ These snippets simulate lotteries.
 
 ## Contents
 
-lotteryIterated.py
+###### lotteryIterated.py
 
-lotteryRecursive.py
+###### lotteryRecursive.py
 
 ## License
 
