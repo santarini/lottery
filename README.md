@@ -1,6 +1,6 @@
 # Lottery Simulation
 
-These snippets simulate lotteries.
+These scripts simulate lotteries.
 
 ## Contents
 
